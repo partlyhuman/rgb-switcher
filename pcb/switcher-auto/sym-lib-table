@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "REB-DIN")(type "KiCad")(uri "${KIPRJMOD}/Libraries/MD-90SM/MD-90SM.kicad_sym")(options "")(descr ""))
+)
