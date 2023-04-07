@@ -1,3 +1,0 @@
-(fp_lib_table
-  (lib (name "DIN9")(type "KiCad")(uri "${KIPRJMOD}/Libraries/MD-90SM")(options "")(descr ""))
-)
