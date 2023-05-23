@@ -1,5 +1,5 @@
 (sym_lib_table
   (version 7)
   (lib (name "REB-DIN")(type "KiCad")(uri "${KIPRJMOD}/Libraries/MD-90SM/MD-90SM.kicad_sym")(options "")(descr ""))
-  (lib (name "DIN9")(type "KiCad")(uri "/Users/roger/Documents/rgb-switcher/pcb/switcher-input-daughterboard/MD-90SM.kicad_sym")(options "")(descr ""))
+  (lib (name "REB-IR")(type "KiCad")(uri "${KIPRJMOD}/Libraries/TSOP38238/TSOP38238.kicad_sym")(options "")(descr ""))
 )
