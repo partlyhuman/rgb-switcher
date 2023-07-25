@@ -53,4 +53,9 @@
   (pad "S1" thru_hole oval (at 0 0) (size 2.73 1.23) (drill oval 2.2 0.7) (layers "*.Cu" "*.Mask") (tstamp 8ee9fc75-4c55-4464-9f13-eadfe52b2cfd))
   (pad "S2" thru_hole circle (at -7.25 -0.9) (size 3.216 3.216) (drill 2.2) (layers "*.Cu" "*.Mask") (tstamp 5a306cc1-5c2c-4fea-87e8-30eef153add7))
   (pad "S3" thru_hole circle (at 7.25 -0.9) (size 3.216 3.216) (drill 2.2) (layers "*.Cu" "*.Mask") (tstamp d95d5917-dea3-4495-872d-5aba663ca3b5))
+  (model "${KIPRJMOD}/Libraries/MD-90SM/CUI_DEVICES_MD-90SM.step"
+    (offset (xyz -7.25 8 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz -90 0 0))
+  )
 )
