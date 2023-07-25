@@ -1,0 +1,2 @@
+# don't commit a generic production file, there's two separate boards that need to be exported separately
+/production/
