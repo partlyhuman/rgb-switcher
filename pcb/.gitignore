@@ -6,6 +6,7 @@
 # Format documentation: https://kicad.org/help/file-formats/
 
 # Temporary files
+*.lck
 *.000
 *.bak
 *.bck
