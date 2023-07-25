@@ -482,7 +482,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "switcher-auto-mainboard.step",
+      "step": "Renders/mainboard.step",
       "vrml": ""
     },
     "page_layout_descr_file": "default.kicad_wks"
