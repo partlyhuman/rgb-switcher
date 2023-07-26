@@ -20,7 +20,7 @@ Some notes on how to wire your consoles for RGB output, from my experience. A go
 
 ### RGB-capable systems
 
-For systems that are already RGB capable but don't have an MD2 connector, such as MegaDrive/Genesis, Saturn, SNES, N64, Playstation 1/2, arcade superguns, etc., I'll make an MD2 connector out of a SCART connector:
+For systems that are already RGB capable but don't have an MD2 connector, such as Saturn, SNES, N64, Playstation 1/2, etc., I'll make an MD2 connector out of a SCART connector:
 
 * Purchase an RGB-capable SCART connector
 * Splice off the SCART head
