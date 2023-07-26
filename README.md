@@ -1,6 +1,6 @@
 # OveRGBkill
 
-![Render](Renders/OveRGBkill.png)
+![Render](renders/OveRGBkill.png)
 
 *OveRGBkill* is an expandable analog RGB video switcher using common components.
 
