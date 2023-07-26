@@ -71,9 +71,9 @@ You may use the customizable daughterboard to adjust voltages with voltage divid
 
 Of course you can also mix and match.
 
-### Terimation
+### Impedance Matching
 
-The TI 74HC4067 muxer has On-On resistance of around 230Ω. If you use this with a source designed for 75Ω termination, this means that there will be 75+230=305Ω resistance inline, and 75Ω termination. This forms a voltage divider that will make the image much more dim (normally the 75Ω inline and 75Ω terminating resistors form a 1:2 divider).
+The TI 74HC4067 muxer has On-On resistance of around 230Ω. If you use this with an impedance-matched source designed for 75Ω termination, this means that there will be 75+230=305Ω resistance inline, and 75Ω termination. This forms a voltage divider that will make the image much more dim (normally the 75Ω inline and 75Ω terminating resistors form a 1:2 divider).
 
 If you have control over the termination, for example by using any buffered video device between the switcher and your TV, you can design around this. For example, if using a RGB-Component transcoder, replace the 75Ω terminating resistors with ~300Ω resistors.
 
