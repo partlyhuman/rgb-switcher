@@ -65,9 +65,9 @@ Many of these use 5V TTL CSYNC, incorporate a voltage divider of around 1:4  on 
 
 ### Others
 
-In fact it probably never hurts to add 220μF coupling capacitors on all inputs. This could be incorporated into future revisions of the daughterboard.
-
 In general, if you have RGB modded your system, well designed mods will already use the correct voltages, AC coupling, and impedances, and I found that my RGB-modded PC Engine (doujindance) and NESRGB needed no further modification.
+
+**Note** In fact it probably never hurts to add 220μF coupling capacitors on all inputs. This could be incorporated into future revisions of the daughterboard.
 
 ## Build considerations
 
@@ -87,10 +87,12 @@ If you have control over the termination, for example by using any buffered vide
 
 If you don't need to use a transcoder, you could instead use a simple THS7374 circuit with 300Ω termination.
 
-**Note** a buffer could be integrated into a future revision of the hardware so that the switcher has typical 75Ω impedance.
+**Note** there are multiplexers with much less resistance that could be used instead, to easily alleviate the issue. Since I had control over the circuit after the switcher, I chose to use this low-cost multiplexer and solve for the additional resistance.
+
+**Note** alternatively, a video buffer could be integrated into a future revision of the hardware so that the switcher has typical 75Ω impedance.
 
 ### Cables
 
-In the MD2 pinout, ground is carried over the shielding of a cable. Therefore, all mini-DIN 9 cables used with this must be shielded. Use a multimeter to check continuity between the metal outer ring of each end of the cable to verify you have shielded cables.
+In the MD2 pinout, ground is carried over the shielding of a cable. Therefore, all mini-DIN 9 cables used with this must be shielded. Some cheap cables you may find on AliExpress skimp out on this, and it's not called out, so beware. Use a multimeter to check continuity between the metal outer ring of each end of the cable to verify you have shielded cables.
 
 I can verify that (at the time I purchased them) these cables from "wg cable store" are shielded: [AliExpress](https://www.aliexpress.com/item/1005004607170871.html)
