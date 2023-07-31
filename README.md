@@ -4,6 +4,12 @@
 
 *OveRGBkill* is an expandable analog RGB video switcher using common components.
 
+# Warning
+
+This is all hobbyist hardware and software, and could potentially damage your precious retro gaming equipment. It is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and noninfringement.
+
+Be sure to scroll down for important notes integrating this into a real world AV system.
+
 ## Features
 
 * 5, 10, or 15 RGB inputs
@@ -38,6 +44,8 @@ For systems that are already RGB capable but don't have an MD2 connector, such a
 	* For simple applications, something like [MobiusStripTech's breakout](https://oshpark.com/shared_projects/amKj4zix) is great
 	* To include AC coupling capacitors, voltage dividers and/or mono expansion, use the [breakout PCB](pcb/md2-rgb/) in this repository!
 * A 3d printable shell finishes the cable. On one end you have a console-specific connector, on the other end you have a female MD2 connector, and use a straight Mini DIN-9 cable to wire this to your switcher.
+ 	* For the MobiusStripTech breakout, [this case](https://www.thingiverse.com/thing:3048576) works well
+   	* If using our breakout PCB, an accompanying shell is [here](3dp/md2-rgb), based on [sensorslot's project box template](https://github.com/SensorsIot/Project-Box-Templates/)
 
 ### SNES/SFC
 
@@ -49,7 +57,7 @@ Needs 220μF coupling capacitors on RGBC, use the  [breakout PCB](pcb/md2-rgb/) 
 
 ### Sega Genesis/Megadrive
 
-Seems to use a much higher voltage, incorporate a voltage divider of around 1:2 on RGBC, using the breakout PCB or the customizable daughterboard.
+Seems to use a much higher voltage, incorporate a voltage divider of around 1:2 on RGBC (for example R1=33Ω, R2=75Ω), using the breakout PCB or the customizable daughterboard.
 
 ### Arcade superguns
 
