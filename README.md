@@ -6,6 +6,8 @@
 
 # Warning
 
+DO NOT BUILD THIS (YET) if you are not me. It does not switch audio properly at present. 
+
 This is all hobbyist hardware and software, and could potentially damage your precious retro gaming equipment. It is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and noninfringement.
 
 Be sure to scroll down for important notes integrating this into a real world AV system.
