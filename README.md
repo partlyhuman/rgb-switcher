@@ -85,13 +85,7 @@ Of course you can also mix and match.
 
 The TI 74HC4067 muxer has On-On resistance of around 230Ω. If you use this with an impedance-matched source designed for 75Ω termination, this means that there will be 75+230=305Ω resistance inline, and 75Ω termination. This forms a voltage divider that will make the image much more dim (normally the 75Ω inline and 75Ω terminating resistors form a 1:2 divider).
 
-If you have control over the termination, for example by using any buffered video device between the switcher and your TV, you can design around this. For example, if using a RGB-Component transcoder, replace the 75Ω terminating resistors with ~300Ω resistors.
-
-If you don't need to use a transcoder, you could instead use a simple THS7374 circuit with 300Ω termination.
-
-**Note** there are multiplexers with much less resistance that could be used instead, to easily alleviate the issue. Since I had control over the circuit after the switcher, I chose to use this low-cost multiplexer and solve for the additional resistance.
-
-**Note** alternatively, a video buffer could be integrated into a future revision of the hardware so that the switcher has typical 75Ω impedance.
+A video buffer is integrated into the current revision of the hardware so that the switcher has typical 75Ω impedance.
 
 ### Cables
 
