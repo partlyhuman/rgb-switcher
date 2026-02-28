@@ -2,4 +2,8 @@
   (version 7)
   (lib (name "REB-DIN")(type "KiCad")(uri "${KIPRJMOD}/Libraries/MD-90SM/MD-90SM.kicad_sym")(options "")(descr ""))
   (lib (name "REB-IR")(type "KiCad")(uri "${KIPRJMOD}/Libraries/TSOP38238/TSOP38238.kicad_sym")(options "")(descr ""))
+  (lib (name "REB-MUX")(type "KiCad")(uri "${KIPRJMOD}/Libraries/MUX506.kicad_sym")(options "")(descr ""))
+  (lib (name "REB-LTC")(type "KiCad")(uri "${KIPRJMOD}/Libraries/LTC1983.kicad_sym")(options "")(descr ""))
+  (lib (name "Sparkfun-Board")(type "KiCad")(uri "${KIPRJMOD}/Libraries/SparkFun-Board.kicad_sym")(options "")(descr ""))
+  (lib (name "REB-CD74HC")(type "KiCad")(uri "${KIPRJMOD}/Libraries/CD74HC4067SM96/CD74HC4067SM96.kicad_sym")(options "")(descr ""))
 )
