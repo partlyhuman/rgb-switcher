@@ -5378,16 +5378,6 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 227.33) (xy 194.31 227.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0789ab92-8ba4-49b8-87cb-7cf448d04181")
-	)
-	(wire
-		(pts
 			(xy 25.4 33.02) (xy 25.4 26.67)
 		)
 		(stroke
@@ -5838,16 +5828,6 @@
 	)
 	(wire
 		(pts
-			(xy 194.31 204.47) (xy 181.61 204.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "902508c1-7f3d-413c-9a88-2d895862d34b")
-	)
-	(wire
-		(pts
 			(xy 158.75 101.6) (xy 158.75 96.52)
 		)
 		(stroke
@@ -6105,16 +6085,6 @@
 			(type default)
 		)
 		(uuid "e8e71b55-f286-41a7-b865-d6dd045b605d")
-	)
-	(wire
-		(pts
-			(xy 181.61 209.55) (xy 181.61 227.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f0c3e605-13ae-49aa-9855-a3d28340111f")
 	)
 	(wire
 		(pts
@@ -10598,75 +10568,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Small")
-		(at 181.61 207.01 0)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "480e32df-18e6-4987-a4a0-003046397ad7")
-		(property "Reference" "C8"
-			(at 179.07 206.3686 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "1u"
-			(at 179.07 208.9086 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 181.61 207.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 181.61 207.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 181.61 207.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2d2c87fc-4b76-4670-b8f1-ff50483187e2")
-		)
-		(pin "2"
-			(uuid "9b89fe20-6780-4c5f-a691-82753e39d01f")
-		)
-		(instances
-			(project "switcher-auto"
-				(path "/e72d49f3-4a7e-4284-a905-90a44014e1f4"
-					(reference "C8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "SparkFun-Boards:SPARKFUN_PRO_MICRO")
 		(at 326.39 195.58 180)
 		(unit 1)
@@ -13065,21 +12966,21 @@
 		(fields_autoplaced yes)
 		(uuid "c5c50e01-5f4a-47e3-94b0-d8ff880de67e")
 		(property "Reference" "C12"
-			(at 280.67 203.2062 0)
+			(at 285.75 203.2062 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "0.1u"
-			(at 280.67 205.7462 0)
+		(property "Value" "22uF"
+			(at 285.75 205.7462 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
