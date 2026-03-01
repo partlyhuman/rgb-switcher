@@ -4,6 +4,12 @@
 	(generator_version "9.0")
 	(uuid "e72d49f3-4a7e-4284-a905-90a44014e1f4")
 	(paper "A3")
+	(title_block
+		(title "OveRGBkill")
+		(date "2026-02-28")
+		(rev "3")
+		(company "@partlyhuman")
+	)
 	(lib_symbols
 		(symbol "74xx:CD74HC4067SM"
 			(exclude_from_sim no)
@@ -2092,168 +2098,6 @@
 						)
 					)
 					(number "21"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Device:C_Polarized_Small"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0.254)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "C"
-				(at 0.254 1.778 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "C_Polarized_Small"
-				(at 0.254 -2.032 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Polarized capacitor, small symbol"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "cap capacitor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "CP_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "C_Polarized_Small_0_1"
-				(rectangle
-					(start -1.524 0.6858)
-					(end 1.524 0.3048)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.524 -0.3048)
-					(end 1.524 -0.6858)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 1.524) (xy -0.762 1.524)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.016 1.27) (xy -1.016 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "C_Polarized_Small_1_1"
-				(pin passive line
-					(at 0 2.54 270)
-					(length 1.8542)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -2.54 90)
-					(length 1.8542)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5136,7 +4980,18 @@
 		)
 		(uuid "4315c6eb-b2fb-4105-9e1f-479e3e366c6f")
 	)
-	(text "TODO EN could be controlled\nfor power saving? longevity?\nor does it not matter?"
+	(text "The voltage rating of the output capacitor\nmust be 10 V or more. For example, a 10-V 0603 1-µF\nis acceptable for use with the LM2776"
+		(exclude_from_sim no)
+		(at 332.74 124.714 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7c8be79d-2adc-44c4-b38a-f48d74846a04")
+	)
+	(text "TODO ~{EN} could be controlled\nfor power saving? longevity?\nor does it not matter?"
 		(exclude_from_sim no)
 		(at 37.846 19.558 0)
 		(effects
@@ -5145,6 +5000,17 @@
 			)
 		)
 		(uuid "ac430443-150e-415d-9364-e35fca96c7b0")
+	)
+	(text "For most applications, ceramic capacitors with an \nX7R or X5R temperature characteristic are preferred\nfor use with the LM2776"
+		(exclude_from_sim no)
+		(at 318.008 138.684 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ac919a95-cef8-4e2f-afd2-74b3d4d87205")
 	)
 	(text "On-on resistance of 160R + standard 75R = 235R\n1:2 divider before 2:1 amplifier"
 		(exclude_from_sim no)
@@ -6088,6 +5954,16 @@
 	)
 	(wire
 		(pts
+			(xy 25.4 46.99) (xy 25.4 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5c0166f-8b0c-47e3-b873-9083bd39cf5c")
+	)
+	(wire
+		(pts
 			(xy 314.96 132.08) (xy 314.96 135.89)
 		)
 		(stroke
@@ -6726,7 +6602,7 @@
 		)
 		(uuid "29b40cdc-b7db-4bf7-bd30-1b67834f9862")
 	)
-	(label "EN"
+	(label "~{EN}"
 		(at 78.74 73.66 0)
 		(effects
 			(font
@@ -6876,7 +6752,7 @@
 		)
 		(uuid "305dccf3-ecb4-4014-bd53-a30a861e0034")
 	)
-	(label "EN"
+	(label "~{EN}"
 		(at 163.83 73.66 0)
 		(effects
 			(font
@@ -7826,6 +7702,16 @@
 		)
 		(uuid "7d5ad4dd-ff18-45bd-b27a-4439c7eb90e7")
 	)
+	(label "EN"
+		(at 25.4 40.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7df8358a-5278-4f83-9b2f-8cea68c6e5aa")
+	)
 	(label "GND"
 		(at 151.13 86.36 270)
 		(effects
@@ -7936,7 +7822,7 @@
 		)
 		(uuid "850bd42a-6dbb-4ea5-a7db-f0bc0cfb348c")
 	)
-	(label "EN"
+	(label "~{EN}"
 		(at 171.45 146.05 0)
 		(effects
 			(font
@@ -8566,7 +8452,7 @@
 		)
 		(uuid "aefc8d3d-77f2-4fc1-830c-5d5be3756ed7")
 	)
-	(label "EN"
+	(label "~{EN}"
 		(at 208.28 73.66 0)
 		(effects
 			(font
@@ -8716,7 +8602,7 @@
 		)
 		(uuid "b8e1bd95-d2b0-4662-a359-1407e3a2f731")
 	)
-	(label "EN"
+	(label "~{EN}"
 		(at 25.4 26.67 0)
 		(effects
 			(font
@@ -8976,7 +8862,7 @@
 		)
 		(uuid "d2d5993c-d62c-4221-b18b-b3ab4ae1c236")
 	)
-	(label "EN"
+	(label "~{EN}"
 		(at 121.92 73.66 0)
 		(effects
 			(font
@@ -9395,6 +9281,16 @@
 			(justify right bottom)
 		)
 		(uuid "f4e6f3eb-8585-4424-8c26-ff09b3c7ca17")
+	)
+	(label "VCC"
+		(at 25.4 46.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f83f4460-4cdb-47a6-9f09-e69bb000f11a")
 	)
 	(label "1_CVID"
 		(at 41.91 124.46 0)
@@ -9894,7 +9790,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2.2uF"
+		(property "Value" "1uF"
 			(at 290.83 128.2638 0)
 			(effects
 				(font
@@ -10497,6 +10393,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Small")
+		(at 312.42 135.89 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3f53c5f9-78d8-42d0-bfe2-b72359ba0e2e")
+		(property "Reference" "C14"
+			(at 312.4136 142.24 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1uF"
+			(at 312.4136 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 312.42 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 312.42 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 312.42 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f9672b4b-9d8b-4e27-9d9a-8c7706005982")
+		)
+		(pin "2"
+			(uuid "db8fcd56-0128-46f5-abd3-dab6534ac552")
+		)
+		(instances
+			(project ""
+				(path "/e72d49f3-4a7e-4284-a905-90a44014e1f4"
+					(reference "C14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_name "R_Small_1")
 		(lib_id "Device:R_Small")
 		(at 299.72 194.31 0)
@@ -10525,7 +10489,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 299.72 194.31 0)
 			(effects
 				(font
@@ -11351,7 +11315,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_02x22_Top_Bottom"
+		(property "Value" "Inputs 0-4"
 			(at 35.56 111.76 0)
 			(effects
 				(font
@@ -11868,7 +11832,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2.2uF"
+		(property "Value" "1uF"
 			(at 331.47 118.1162 0)
 			(effects
 				(font
@@ -12069,7 +12033,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_02x22_Top_Bottom"
+		(property "Value" "Inputs 5-9"
 			(at 68.58 111.76 0)
 			(effects
 				(font
@@ -13288,74 +13252,6 @@
 			(project "switcher-auto"
 				(path "/e72d49f3-4a7e-4284-a905-90a44014e1f4"
 					(reference "R16")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Polarized_Small")
-		(at 312.42 135.89 90)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "dbc92b85-b51d-4a47-b4d6-6a1536084ad5")
-		(property "Reference" "C14"
-			(at 311.8739 142.24 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1uF"
-			(at 311.8739 139.7 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 312.42 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 312.42 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Polarized capacitor, small symbol"
-			(at 312.42 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "550a4198-3dba-4e6e-a670-bb850c4887d4")
-		)
-		(pin "2"
-			(uuid "07e8b861-55da-43ab-86f7-9dcb66714855")
-		)
-		(instances
-			(project ""
-				(path "/e72d49f3-4a7e-4284-a905-90a44014e1f4"
-					(reference "C14")
 					(unit 1)
 				)
 			)
@@ -14598,7 +14494,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_02x22_Top_Bottom"
+		(property "Value" "Inputs 10-14"
 			(at 101.6 111.76 0)
 			(effects
 				(font
