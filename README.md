@@ -6,7 +6,7 @@
 
 # Warning
 
-DO NOT BUILD THIS (YET) if you are not me. It does not switch audio properly at present. 
+DO NOT BUILD THIS (YET) if you are not me. It does not switch audio properly at present.
 
 This is all hobbyist hardware and software, and could potentially damage your precious retro gaming equipment. It is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and noninfringement.
 
@@ -32,7 +32,7 @@ For systems that are already RGB capable but don't have an MD2 connector, such a
 
 * Purchase an RGB-capable SCART connector
 * Splice off the SCART head
-* Disassemble the SCART head and use a SCART pinout to note which colour wire has which purpose. Many I've bought from AliExpress have this pinout *but you must verify for yourself*
+* Disassemble the SCART head and use a SCART pinout to note which colour wire has which purpose. Many I've bought from AliExpress have this pinout *but you MUST verify for yourself* using a continuity tester
 	* Yellow — Composite
 	* Orange — Red
 	* Green — Green
@@ -42,11 +42,13 @@ For systems that are already RGB capable but don't have an MD2 connector, such a
 	* Black — Audio GND
 	* White — Audio Left
 	* Red — Audio Right
-* Use a Mini DIN-9 breakout PCB with a female Mini DIN-9 socket
-	* For simple applications, something like [MobiusStripTech's breakout](https://oshpark.com/shared_projects/amKj4zix) is great
+* Use a Mini DIN-9 breakout PCB with a female Mini DIN-9 socket (the MD-90SM is ubiquitous)
+	* For simple applications, something like [MobiusStripTech's breakout board](https://oshpark.com/shared_projects/amKj4zix) is great
+ 	* An even more compact option is [DB Electronics' breakout board](https://github.com/db-electronics/MD-90SM-breakout-kicad/releases/tag/0.1), specifically version 0.1.
 	* To include AC coupling capacitors, voltage dividers and/or mono expansion, use the [breakout PCB](pcb/md2-rgb/) in this repository!
 * A 3d printable shell finishes the cable. On one end you have a console-specific connector, on the other end you have a female MD2 connector, and use a straight Mini DIN-9 cable to wire this to your switcher.
  	* For the MobiusStripTech breakout, [this case](https://www.thingiverse.com/thing:3048576) works well
+  	* If you use the DB Electronics breakout, I've [remixed the above case](https://www.thingiverse.com/thing:7306404)
    	* If using our breakout PCB, an accompanying shell is [here](3dp/md2-rgb), based on [sensorslot's project box template](https://github.com/SensorsIot/Project-Box-Templates/)
 
 ### SNES/SFC
