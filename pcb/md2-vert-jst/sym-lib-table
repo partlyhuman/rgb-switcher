@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "MD-90SM")(type "KiCad")(uri "/Users/roger/Documents/rgb-switcher/pcb/md2-rgb/Libraries/MD-90SM/MD-90SM.kicad_sym")(options "")(descr ""))
+)
