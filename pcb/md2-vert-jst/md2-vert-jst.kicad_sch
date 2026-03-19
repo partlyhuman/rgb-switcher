@@ -835,7 +835,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "MD-90SM"
+		(property "Value" "MDC-9-04"
 			(at 104.14 54.6099 0)
 			(effects
 				(font
@@ -844,7 +844,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_MiniDIN9_TH_Vertical:MDC-9-04"
+		(property "Footprint" "Connector_MiniDIN9_TH_Vertical:MDC-9-04_incorrect_symmetric_shielding"
 			(at 106.68 36.83 0)
 			(effects
 				(font

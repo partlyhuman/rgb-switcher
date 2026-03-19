@@ -209,7 +209,7 @@
 	)
 	(pad "1" thru_hole oval
 		(at -1 -2.7)
-		(size 1.5 1.5)
+		(size 1.2 1.6)
 		(drill 0.9)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
@@ -218,7 +218,7 @@
 	)
 	(pad "2" thru_hole oval
 		(at 1 -2.7)
-		(size 1.5 1.5)
+		(size 1.2 1.6)
 		(drill 0.9)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
@@ -227,7 +227,7 @@
 	)
 	(pad "3" thru_hole oval
 		(at -3.3 -0.4)
-		(size 1.5 1.5)
+		(size 1.2 1.6)
 		(drill 0.9)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
@@ -236,7 +236,7 @@
 	)
 	(pad "4" thru_hole oval
 		(at -1 -0.7)
-		(size 1.5 1.5)
+		(size 1.2 1.6)
 		(drill 0.9)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
@@ -245,7 +245,7 @@
 	)
 	(pad "5" thru_hole oval
 		(at 1 -0.7)
-		(size 1.5 1.5)
+		(size 1.2 1.6)
 		(drill 0.9)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
@@ -254,7 +254,7 @@
 	)
 	(pad "6" thru_hole oval
 		(at 3.3 -0.4)
-		(size 1.5 1.5)
+		(size 1.2 1.6)
 		(drill 0.9)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
@@ -263,7 +263,7 @@
 	)
 	(pad "7" thru_hole oval
 		(at -2.8 1.6)
-		(size 1.5 1.5)
+		(size 1.2 1.6)
 		(drill 0.9)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
@@ -272,7 +272,7 @@
 	)
 	(pad "8" thru_hole oval
 		(at 0.5 1.9)
-		(size 1.5 1.5)
+		(size 1.2 1.6)
 		(drill 0.9)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
@@ -281,30 +281,28 @@
 	)
 	(pad "9" thru_hole oval
 		(at 2.8 1.6)
-		(size 1.5 1.5)
+		(size 1.2 1.6)
 		(drill 0.9)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(thermal_bridge_angle 45)
 		(uuid "4f59df5c-aa37-4580-859b-f310b4efc867")
 	)
-	(pad "S1" thru_hole roundrect
+	(pad "S1" thru_hole oval
 		(at -5.2 0)
-		(size 2.1 4.1)
+		(size 2 5)
 		(drill oval 1.5 3.5)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(roundrect_rratio 0.1666666667)
 		(thermal_bridge_angle 45)
 		(uuid "2f837cee-6cfc-497f-9c30-300fa5599e90")
 	)
-	(pad "S2" thru_hole roundrect
+	(pad "S2" thru_hole oval
 		(at 5.2 0)
-		(size 2.1 4.1)
+		(size 2 5)
 		(drill oval 1.5 3.5)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(roundrect_rratio 0.1666666667)
 		(thermal_bridge_angle 45)
 		(uuid "160031bd-24e4-42e2-a92f-5365a233e07f")
 	)
