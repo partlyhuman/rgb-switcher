@@ -6,21 +6,20 @@
 
 # Warning
 
-DO NOT BUILD THIS (YET) if you are not me. It does not switch audio properly at present.
-
 This is all hobbyist hardware and software, and could potentially damage your precious retro gaming equipment. It is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and noninfringement.
 
 Be sure to scroll down for important notes integrating this into a real world AV system.
 
 ## Features
 
-* 5, 10, or 15 RGB inputs
+* Modular, up to 15 RGB inputs
 * Standard Megadrive (MD2) style Mini-DIN 9 connectors
+* Very compact, powered via USB 5V
 * Sense and automatically switch to active input
-* Uses composite for sync
-* Routes R, G, B, composite/sync, stereo audio L, R, ground, and +5V. Other pins are not connected.
+* Routes R, G, B, and Composite video, Stereo audio Left, Right, Ground, and +5V. Other pins are not connected
+* Extremely low cost per assembly for [parts](https://www.digikey.ca/en/mylists/list/I2IMYMPBML) (~US$20) and <100mm 4-layer PCB (~US$7)
 
-Pairs well with a [RGB-Component transcoder](https://github.com/partlyhuman/rgb-yuv-transcoder) if you have a TV with component input.
+Pairs well with a [HD Retrovision Genesis cable](https://www.hdretrovision.com/genesis) or my inferior [RGB-Component transcoder](https://github.com/partlyhuman/rgb-yuv-transcoder) if you have a TV with component input.
 
 ## Integrations
 
@@ -84,8 +83,6 @@ You may use the customizable daughterboard to adjust voltages with voltage divid
 Of course you can also mix and match.
 
 ### Impedance Matching
-
-The TI 74HC4067 muxer has On-On resistance of around 230Ω. If you use this with an impedance-matched source designed for 75Ω termination, this means that there will be 75+230=305Ω resistance inline, and 75Ω termination. This forms a voltage divider that will make the image much more dim (normally the 75Ω inline and 75Ω terminating resistors form a 1:2 divider).
 
 A video buffer is integrated into the current revision of the hardware so that the switcher has typical 75Ω impedance.
 
