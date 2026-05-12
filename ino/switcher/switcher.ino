@@ -1,70 +1,97 @@
 #define CHANNELS 15
 
-// 5v sense selector
-#define R0 3
-#define R1 2
-#define R2 5
-#define R3 4
-#define SENSE A0
-#define TRIGGER_V 900
+// 5v VIN_ADC selector
+#define VIN_A0 10
+#define VIN_A1 16
+#define VIN_A2 14
+#define VIN_A3 15
+#define VIN_ADC A0
+// out of 1024, fraction of VCC
+// about 3V at 4.9V
+#define TRIGGER_V 620
 
-// mux selector
-#define S0 7
-#define S1 8
-#define S2 9
-#define S3 10
+// video mux
+#define VID_A0 6
+#define VID_A1 7
+#define VID_A2 8
+#define VID_A3 9
+// audio mux
+#define AUD_A0 5
+#define AUD_A1 4
+#define AUD_A2 3
+#define AUD_A3 2
 
-// buttons
-#define SW1 12
-#define SW2 11
+// Look up the address of a channel here
+const uint8_t AUDIO_MAP[] {8,9,10,11,12,13,14,15,7,6,5,4,3,2,1,0};
 
-// IR
-#define IR 0
-
-
-// let -1 mean none are active
 const int ALL_OFF = -1;
 static int currentChannel = ALL_OFF;
 
+void flash(uint8_t pin, int times = 1, unsigned long onfor = 100, unsigned long offfor = 50) {
+  for (int i = 0; i < times; i++) {
+    digitalWrite(pin, HIGH);
+    delay(onfor);
+    digitalWrite(pin, LOW);
+    delay(offfor);
+  }
+}
+
 void setup() {
   Serial.begin(115200);
-  delay(1000);
   Serial.println("BOOTED");
 
-  pinMode(R0, OUTPUT);
-  pinMode(R1, OUTPUT);
-  pinMode(R2, OUTPUT);
-  pinMode(R3, OUTPUT);
-  pinMode(S0, OUTPUT);
-  pinMode(S1, OUTPUT);
-  pinMode(S2, OUTPUT);
-  pinMode(S3, OUTPUT);
-  pinMode(SW1, INPUT_PULLUP);
-  pinMode(SW2, INPUT_PULLUP);
+  pinMode(VIN_A0, OUTPUT);
+  pinMode(VIN_A1, OUTPUT);
+  pinMode(VIN_A2, OUTPUT);
+  pinMode(VIN_A3, OUTPUT);
+
+  pinMode(VID_A0, OUTPUT);
+  pinMode(VID_A1, OUTPUT);
+  pinMode(VID_A2, OUTPUT);
+  pinMode(VID_A3, OUTPUT);
+
+  pinMode(AUD_A0, OUTPUT);
+  pinMode(AUD_A1, OUTPUT);
+  pinMode(AUD_A2, OUTPUT);
+  pinMode(AUD_A3, OUTPUT);
+
+  pinMode(VIN_ADC, INPUT);
+  // pinMode(SW1, INPUT_PULLUP);
+  // pinMode(SW2, INPUT_PULLUP);
+
+  pinMode(LED_BUILTIN, OUTPUT);
+  // pinMode(LED_BUILTIN_RX, OUTPUT);
+  // pinMode(LED_BUILTIN_TX, OUTPUT);
+
+  flash(LED_BUILTIN, 3);
+  // flash(LED_BUILTIN_RX);
+  // flash(LED_BUILTIN_TX);
 }
 
 void setSenseChannel(int channel) {
-  digitalWrite(R0, (channel & 0b0001) > 0);
-  digitalWrite(R1, (channel & 0b0010) > 0);
-  digitalWrite(R2, (channel & 0b0100) > 0);
-  digitalWrite(R3, (channel & 0b1000) > 0);
+  digitalWrite(VIN_A0, (channel & 0b0001) > 0);
+  digitalWrite(VIN_A1, (channel & 0b0010) > 0);
+  digitalWrite(VIN_A2, (channel & 0b0100) > 0);
+  digitalWrite(VIN_A3, (channel & 0b1000) > 0);
   delay(10);
 }
 
 int senseChannel(int channel) {
   setSenseChannel(channel);
-  return analogRead(SENSE);
+  return analogRead(VIN_ADC);
 }
 
 // returns most active channel
 int sweepChannels() {
   for (int i = 0; i < CHANNELS; i++) {
-    int sense = senseChannel(i);
-    Serial.print(i);
-    Serial.print(" ");
-    Serial.println(sense);
+    int voltage = senseChannel(i);
+    if (voltage > 0) {
+      Serial.print(i);
+      Serial.print(" ");
+      Serial.println(voltage);
+    }
     // For now the first one that's on is on
-    if (sense > TRIGGER_V) {
+    if (voltage > TRIGGER_V) {
       return i;
     }
   }
@@ -73,24 +100,39 @@ int sweepChannels() {
 
 void setChannel(int channel) {
   if (channel < 0) return;
-  digitalWrite(S0, (channel & 0b0001) > 0);
-  digitalWrite(S1, (channel & 0b0010) > 0);
-  digitalWrite(S2, (channel & 0b0100) > 0);
-  digitalWrite(S3, (channel & 0b1000) > 0);
+
+  digitalWrite(VID_A0, (channel & 0b0001) > 0);
+  digitalWrite(VID_A1, (channel & 0b0010) > 0);
+  digitalWrite(VID_A2, (channel & 0b0100) > 0);
+  digitalWrite(VID_A3, (channel & 0b1000) > 0);
+
+  uint8_t achannel = AUDIO_MAP[channel];
+  Serial.print(channel);
+  Serial.print(" -> audio channel ");
+  Serial.println(achannel);
+  digitalWrite(AUD_A0, (achannel & 0b0001) > 0);
+  digitalWrite(AUD_A1, (achannel & 0b0010) > 0);
+  digitalWrite(AUD_A2, (achannel & 0b0100) > 0);
+  digitalWrite(AUD_A3, (achannel & 0b1000) > 0);
 }
 
 void loop() {
   bool off = currentChannel == ALL_OFF;
-  delay(off ? 2000 : 6000);
+  delay(off ? 1000 : 4000);
   if (off) {
-    currentChannel = sweepChannels();
-    setChannel(currentChannel);
+    int newChannel = sweepChannels();
+    setChannel(newChannel);
+    if (newChannel != currentChannel) {
+      flash(LED_BUILTIN);
+      Serial.print("Channel = ");
+      Serial.println(newChannel);
+    }
+    currentChannel = newChannel;
   } else {
     // we only need to check if the current channel turned off (should we make this test more than once?)
     if (senseChannel(currentChannel) < TRIGGER_V) {
       currentChannel = ALL_OFF;
+      Serial.println("OFF");
     }
   }
-  Serial.print("Current Channel = ");
-  Serial.println(currentChannel);
 }
